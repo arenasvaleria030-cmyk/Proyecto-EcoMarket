@@ -1,0 +1,63 @@
+.catalog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cuando la pantalla es grande (Escritorio), se divide en 2 columnas */
+@media (min-width: 768px) {
+    .catalog-container {
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+/* Barra lateral de filtros fija (Sticky) */
+.sidebar-filters {
+    background-color: var(--gris-claro);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+    height: fit-content;
+    position: sticky;
+    top: 90px; /* Se queda quieta abajo del menú de navegación */
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--gris-oscuro);
+    border-bottom: 2px solid var(--verde-suave);
+    padding-bottom: 5px;
+}
+
+.filter-group ul {
+    list-style: none;
+}
+
+.filter-group ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.filter-group ul li:hover {
+    color: var(--verde-principal);
+}
+
+/* Buscador Superior Estilizado */
+.search-bar-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 1rem;
+}

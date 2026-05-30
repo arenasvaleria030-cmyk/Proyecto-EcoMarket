@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - EcoMarket</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">🍃 EcoMarket</div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="productos.html" class="nav-link active">Productos</a>
+                <a href="sobre-nosotros.html" class="nav-link">Nosotros</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <span>🔍</span>
+                <span>🛒</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container catalog-container">
+        
+        <aside class="sidebar-filters">
+            <div class="filter-group">
+                <h3>Categorías</h3>
+                <ul>
+                    <li>🌱 Hogar</li>
+                    <li>👗 Moda Sostenible</li>
+                    <li>🧴 Cuidado Personal</li>
+                    <li>🍎 Alimentos Orgánicos</li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h3>Disponibilidad</h3>
+                <ul>
+                    <li><input type="checkbox" checked> En Stock</li>
+                    <li><input type="checkbox"> Agotado</li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h3>Rango de Precios</h3>
+                <input type="range" min="0" max="50" style="width: 100%;">
+            </div>
+        </aside>
+
+        <main>
+            <div class="search-bar-container">
+                <input type="text" class="search-input" placeholder="Buscar productos ecológicos...">
+            </div>
+
+            <div class="product-grid">
+                
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/jabon-artesanal.jpg" alt="Jabón Artesanal" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Jabón Artesanal</h4>
+                        <p class="product-desc">Hecho a base de coco y aceites esenciales naturales.</p>
+                        <div class="product-price">$6.00</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="" alt="Esponja de Luffa" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Esponja de Luffa</h4>
+                        <p class="product-desc">Alternativa vegetal y 100% compostable al plástico.</p>
+                        <div class="product-price">$3.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card" style="opacity: 0.7;">
+                    <div class="product-img" style="background-color: #ffeaa7; color: #d63031; font-weight: bold; position: relative;">
+                        <img src="../imagen/detergente-ecologico.jpg" alt="Detergente Ecológico - Agotado" class="img-content" style="opacity: 0.4;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">AGOTADO</span>
+                    </div>
+                    <div class="product-info">
+                        <h4>Detergente Ecológico</h4>
+                        <p class="product-desc">Fórmula biodegradable libre de fosfatos agresivos.</p>
+                        <div class="product-price">$14.00</div>
+                        <button class="btn" style="background-color: #b2bec3; cursor: not-allowed;">Sin Stock</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/cubiertos-madera.jpg" alt="Cubiertos de Madera" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Cubiertos de Madera</h4>
+                        <p class="product-desc">Set portátil de bambú con estuche de tela lavable.</p>
+                        <div class="product-price">$8.20</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/bolsas-silicona.jpg" alt="Bolsas de Silicona" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Bolsas de Silicona</h4>
+                        <p class="product-desc">Reutilizables para almacenar y congelar alimentos.</p>
+                        <div class="product-price">$11.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/champu-solido.jpg" alt="Champú Sólido" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Champú Sólido</h4>
+                        <p class="product-desc">Extracto de menta y romero, sin empaque plástico.</p>
+                        <div class="product-price">$9.00</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/desodorante-natural.jpg" alt="Desodorante Natural" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Desodorante Natural</h4>
+                        <p class="product-desc">En tubo de cartón biodegradable, libre de aluminio.</p>
+                        <div class="product-price">$7.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/taza-bambu.jpg" alt="Taza de Fibra de Bambú" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Taza de Fibra de Bambú</h4>
+                        <p class="product-desc">Reutilizable, ideal para llevar tu café diario.</p>
+                        <div class="product-price">$12.00</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/cepillo-bambu.jpg" alt="Cepillo de Bambú" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Cepillo de Bambú</h4>
+                        <p class="product-desc">Biodegradable y con cerdas suaves de carbón activo.</p>
+                        <div class="product-price">$4.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/bolsa-tela.jpg" alt="Bolsa de Tela Reutilizable" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Bolsa de Tela Reutilizable</h4>
+                        <p class="product-desc">Hecha de algodón orgánico ideal para compras diarias.</p>
+                        <div class="product-price">$3.20</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/botella-termica.jpg" alt="Botella Térmica Inox" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Botella Térmica Inox</h4>
+                        <p class="product-desc">Mantiene tus bebidas frías o calientes por horas.</p>
+                        <div class="product-price">$18.90</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/pajitas-acero.jpg" alt="Pajitas de Acero Inoxidable" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Pajitas de Acero Inoxidable</h4>
+                        <p class="product-desc">Set de 4 pajitas con cepillo limpiador incluido.</p>
+                        <div class="product-price">$5.00</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/envoltorios-cera.jpg" alt="Envoltorios de Cera de Abeja" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Envoltorios de Cera de Abeja</h4>
+                        <p class="product-desc">Alternativa perfecta al papel film de plástico.</p>
+                        <div class="product-price">$12.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/termo-cafe.jpg" alt="Termo para Café de Fibra" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Termo para Café de Fibra</h4>
+                        <p class="product-desc">Fabricado con cáscara de arroz, ecológico y ligero.</p>
+                        <div class="product-price">$9.99</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/libreta-reciclada.jpg" alt="Libreta de Papel Reciclado" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Libreta Reciclada</h4>
+                        <p class="product-desc">Hojas 100% recicladas y tapas de cartón kraft natural.</p>
+                        <div class="product-price">$4.99</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/discos-desmaquillantes.jpg" alt="Discos Desmaquillantes" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Discos Desmaquillantes</h4>
+                        <p class="product-desc">Pack de 10 discos de algodón orgánico y lavables.</p>
+                        <div class="product-price">$7.20</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/velas-soja.jpg" alt="Velas de Cera de Soja" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Velas de Cera de Soja</h4>
+                        <p class="product-desc">Aromáticas, ecológicas y con envase de vidrio reutilizable.</p>
+                        <div class="product-price">$8.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/crema-solar.jpg" alt="Crema Solar Eco-Friendly" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Protector Solar Eco</h4>
+                        <p class="product-desc">Filtro mineral biodegradable que protege los arrecifes.</p>
+                        <div class="product-price">$16.00</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/calcetines-organicos.jpg" alt="Calcetines de Algodón Orgánico" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Calcetines Orgánicos</h4>
+                        <p class="product-desc">Tejido suave, sostenible y libre de pesticidas tóxicos.</p>
+                        <div class="product-price">$5.50</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="../imagen/almohadilla-semillas.jpg" alt="Almohadilla Térmica de Semillas" class="img-content">
+                    </div>
+                    <div class="product-info">
+                        <h4>Almohadilla de Semillas</h4>
+                        <p class="product-desc">Rellena de trigo y lavanda para alivio terapéutico.</p>
+                        <div class="product-price">$13.20</div>
+                        <button class="btn">Añadir al carrito</button>
+                        <button class="btn-fav">❤️ Favorito</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link">Anterior</a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">Siguiente</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h3>EcoMarket</h3>
+                <p>Cuidando el planeta una compra a la vez.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div style="font-size: 1.5rem; display: flex; gap: 15px;">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

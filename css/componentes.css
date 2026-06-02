@@ -101,3 +101,124 @@
 .form-control:required:focus:invalid {
     border-color: var(--alerta-error);
 }
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* Inputs y Textarea */
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #334155;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Efecto Focus: Limpio y verde moderno */
+.form-control:focus {
+    outline: none;
+    border-color: #10b981; /* Verde brillante moderno */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Ajuste específico para el área de texto */
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botón de Enviar (Estilo EcoMarket) */
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #059669; /* Verde esmeralda principal */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-align: center;
+}
+
+/* Hover con contraste Borgoña para destacar */
+.btn-primary:hover {
+    background-color: #800020; /* Elegante toque borgoña al interactuar */
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Ocultar los inputs tipo radio de la vista del usuario */
+input[type="radio"][name="filtro-eco"] {
+    display: none;
+}
+
+/* El menú lateral de categorías usará puntero de mano */
+.lbl-cat {
+    display: block;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lbl-cat:hover {
+    background-color: #f1f5f9;
+}
+
+/* ========================================================
+   REGLAS DE FILTRADO CSS PURO
+   ======================================================== */
+
+/* Si se selecciona HOGAR, oculta los que NO sean de hogar */
+#ver-hogar:checked ~ .catalog-container .product-grid .product-card:not(.cat-hogar) {
+    display: none;
+}
+
+/* Si se selecciona MODA, oculta los que NO sean de moda */
+#ver-moda:checked ~ .catalog-container .product-grid .product-card:not(.cat-moda) {
+    display: none;
+}
+
+/* Si se selecciona CUIDADO, oculta los que NO sean de cuidado */
+#ver-cuidado:checked ~ .catalog-container .product-grid .product-card:not(.cat-cuidado) {
+    display: none;
+}
+
+/* Si se selecciona ALIMENTOS, oculta los que NO sean de alimentos */
+#ver-alimentos:checked ~ .catalog-container .product-grid .product-card:not(.cat-alimentos) {
+    display: none;
+}
+
+/* ========================================================
+   EFECTO VISUAL: PINTAR EL BOTÓN ACTIVO EN LA BARRA LATERAL
+   ======================================================== */
+#ver-todos:checked ~ .catalog-container [for="ver-todos"],
+#ver-hogar:checked ~ .catalog-container [for="ver-hogar"],
+#ver-moda:checked ~ .catalog-container [for="ver-moda"],
+#ver-cuidado:checked ~ .catalog-container [for="ver-cuidado"],
+#ver-alimentos:checked ~ .catalog-container [for="ver-alimentos"] {
+    color: #10b981; /* Resalta con tu color verde EcoMarket */
+    font-weight: bold;
+}

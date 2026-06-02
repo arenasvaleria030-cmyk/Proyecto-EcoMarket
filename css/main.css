@@ -348,7 +348,7 @@ img {
 }
 
 .footer-section h3 {
-    color: var(--verde-principal);
+    color: var(--verde-principal);  
     margin-bottom: 15px;
 }
 
@@ -366,4 +366,156 @@ img {
     padding-top: 20px;
     font-size: 0.9rem;
     color: #a0aec0;
+}
+
+/* ==========================================
+   8. VISTA ESPECÍFICA: SOBRE NOSOTROS
+   ========================================== */
+   .main-content-about {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estructura Historia (Flexbox adaptable) */
+.history-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px 0 60px;
+    align-items: center;
+}
+
+.history-image {
+    width: 100%;
+    height: 300px;
+    background-color: var(--gris-claro);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.history-text h2 {
+    font-size: 2.5rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 20px;
+}
+
+.history-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+/* Pilares en cuadrícula */
+.principles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.principle-item {
+    background-color: var(--gris-claro);
+    border: 1px solid var(--borde);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.principle-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde-principal);
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.principle-item h3 {
+    margin-bottom: 10px;
+    color: var(--gris-oscuro);
+}
+
+/* Bloque de Testimonios (Desplazamiento horizontal en móvil) */
+.testimonials-section {
+    margin: 60px 0;
+}
+
+.testimonials-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 5px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Oculta barra en Firefox */
+}
+
+.testimonials-slider::-webkit-scrollbar {
+    display: none; /* Oculta barra en Chrome/Safari */
+}
+
+.testimonial-card {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 25px;
+    border-radius: 8px;
+    min-width: 280px;
+    flex: 1 0 280px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.stars {
+    color: #f1c40f;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.slider-hint {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   9. MEDIA QUERIES PARA SOBRE NOSOTROS
+   ========================================== */
+@media (min-width: 768px) {
+    /* Historia lado a lado en tablets y PC */
+    .history-section {
+        flex-direction: row;
+    }
+    
+    .history-image, .history-text {
+        flex: 1;
+        width: 50%;
+    }
+
+    .history-image {
+        height: 400px;
+    }
+
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .principles-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonials-slider {
+        overflow-x: visible;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .slider-hint {
+        display: none; 
+    }
 }

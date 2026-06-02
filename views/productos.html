@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos - EcoMarket</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo de Productos - EcoMarket</title>
+        <!-- Asegúrate de tener estas líneas para que cargue todo -->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/componentes.css">
+    </head>
 </head>
 <body>
+
+    <input type="radio" name="filtro-eco" id="ver-todos" checked>
+    <input type="radio" name="filtro-eco" id="ver-hogar">
+    <input type="radio" name="filtro-eco" id="ver-moda">
+    <input type="radio" name="filtro-eco" id="ver-cuidado">
+    <input type="radio" name="filtro-eco" id="ver-alimentos">
 
     <header class="main-header">
         <div class="container header-container">
@@ -29,11 +43,12 @@
         <aside class="sidebar-filters">
             <div class="filter-group">
                 <h3>Categorías</h3>
-                <ul>
-                    <li>🌱 Hogar</li>
-                    <li>👗 Moda Sostenible</li>
-                    <li>🧴 Cuidado Personal</li>
-                    <li>🍎 Alimentos Orgánicos</li>
+                <ul class="categorias-lista">
+                    <li><label for="ver-todos" class="lbl-cat">👁️ Mostrar Todos</label></li>
+                    <li><label for="ver-hogar" class="lbl-cat">🌱 Hogar</label></li>
+                    <li><label for="ver-moda" class="lbl-cat">👗 Moda Sostenible</label></li>
+                    <li><label for="ver-cuidado" class="lbl-cat">🧴 Cuidado Personal</label></li>
+                    <li><label for="ver-alimentos" class="lbl-cat">🍎 Alimentos Orgánicos</label></li>
                 </ul>
             </div>
             <div class="filter-group">
@@ -56,9 +71,9 @@
 
             <div class="product-grid">
                 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/jabon-artesanal.jpg" alt="Jabón Artesanal" class="img-content">
+                        <img src="../img/jabon.jpg" alt="Jabón Artesanal" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Jabón Artesanal</h4>
@@ -69,9 +84,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="" alt="Esponja de Luffa" class="img-content">
+                        <img src="../img/esponja.jpg" alt="Esponja de Luffa" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Esponja de Luffa</h4>
@@ -82,9 +97,9 @@
                     </div>
                 </article>
 
-                <article class="product-card" style="opacity: 0.7;">
+                <article class="product-card cat-hogar" style="opacity: 0.7;">
                     <div class="product-img" style="background-color: #ffeaa7; color: #d63031; font-weight: bold; position: relative;">
-                        <img src="../imagen/detergente-ecologico.jpg" alt="Detergente Ecológico - Agotado" class="img-content" style="opacity: 0.4;">
+                        <img src="../img/detergente.jpg" alt="Detergente Ecológico - Agotado" class="img-content" style="opacity: 0.4;">
                         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">AGOTADO</span>
                     </div>
                     <div class="product-info">
@@ -96,9 +111,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/cubiertos-madera.jpg" alt="Cubiertos de Madera" class="img-content">
+                        <img src="../img/madera.jpg" alt="Cubiertos de Madera" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Cubiertos de Madera</h4>
@@ -109,9 +124,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-alimentos">
                     <div class="product-img">
-                        <img src="../imagen/bolsas-silicona.jpg" alt="Bolsas de Silicona" class="img-content">
+                        <img src="../img/bolsas de silicona.jpg" alt="Bolsas de Silicona" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Bolsas de Silicona</h4>
@@ -122,9 +137,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/champu-solido.jpg" alt="Champú Sólido" class="img-content">
+                        <img src="../img/champo solido.jpg" alt="Champú Sólido" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Champú Sólido</h4>
@@ -135,9 +150,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/desodorante-natural.jpg" alt="Desodorante Natural" class="img-content">
+                        <img src="../img/desodorante.jpg" alt="Desodorante Natural" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Desodorante Natural</h4>
@@ -148,9 +163,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/taza-bambu.jpg" alt="Taza de Fibra de Bambú" class="img-content">
+                        <img src="../img/taza de bambu.jpg" alt="Taza de Fibra de Bambú" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Taza de Fibra de Bambú</h4>
@@ -161,9 +176,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/cepillo-bambu.jpg" alt="Cepillo de Bambú" class="img-content">
+                        <img src="../img/cepillo.jpg" alt="Cepillo de Bambú" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Cepillo de Bambú</h4>
@@ -174,9 +189,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-moda">
                     <div class="product-img">
-                        <img src="../imagen/bolsa-tela.jpg" alt="Bolsa de Tela Reutilizable" class="img-content">
+                        <img src="../img/bolsa de algodon.jpg" alt="Bolsa de Tela Reutilizable" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Bolsa de Tela Reutilizable</h4>
@@ -187,9 +202,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/botella-termica.jpg" alt="Botella Térmica Inox" class="img-content">
+                        <img src="../img/termo.jpg" alt="Botella Térmica Inox" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Botella Térmica Inox</h4>
@@ -200,9 +215,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/pajitas-acero.jpg" alt="Pajitas de Acero Inoxidable" class="img-content">
+                        <img src="../img/pajilla.jpg" alt="Pajitas de Acero Inoxidable" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Pajitas de Acero Inoxidable</h4>
@@ -213,9 +228,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-alimentos">
                     <div class="product-img">
-                        <img src="../imagen/envoltorios-cera.jpg" alt="Envoltorios de Cera de Abeja" class="img-content">
+                        <img src="../img/envoltorios.jpg" alt="Envoltorios de Cera de Abeja" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Envoltorios de Cera de Abeja</h4>
@@ -226,9 +241,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/termo-cafe.jpg" alt="Termo para Café de Fibra" class="img-content">
+                        <img src="../img/termo cafe.jpg" alt="Termo para Café de Fibra" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Termo para Café de Fibra</h4>
@@ -239,9 +254,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/libreta-reciclada.jpg" alt="Libreta de Papel Reciclado" class="img-content">
+                        <img src="../img/libreta.jpg" alt="Libreta de Papel Reciclado" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Libreta Reciclada</h4>
@@ -252,9 +267,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/discos-desmaquillantes.jpg" alt="Discos Desmaquillantes" class="img-content">
+                        <img src="../img/disco desmaquillante.jpg" alt="Discos Desmaquillantes" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Discos Desmaquillantes</h4>
@@ -265,9 +280,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-hogar">
                     <div class="product-img">
-                        <img src="../imagen/velas-soja.jpg" alt="Velas de Cera de Soja" class="img-content">
+                        <img src="../img/velas de soja.jpg" alt="Velas de Cera de Soja" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Velas de Cera de Soja</h4>
@@ -278,9 +293,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/crema-solar.jpg" alt="Crema Solar Eco-Friendly" class="img-content">
+                        <img src="../img/protector solar.jpg" alt="Crema Solar Eco-Friendly" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Protector Solar Eco</h4>
@@ -291,9 +306,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-moda">
                     <div class="product-img">
-                        <img src="../imagen/calcetines-organicos.jpg" alt="Calcetines de Algodón Orgánico" class="img-content">
+                        <img src="../img/calcetines.jpg" alt="Calcetines de Algodón Orgánico" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Calcetines Orgánicos</h4>
@@ -304,9 +319,9 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card cat-cuidado">
                     <div class="product-img">
-                        <img src="../imagen/almohadilla-semillas.jpg" alt="Almohadilla Térmica de Semillas" class="img-content">
+                        <img src="../img/almohadillas.jpg" alt="Almohadilla Técnico de Semillas" class="img-content">
                     </div>
                     <div class="product-info">
                         <h4>Almohadilla de Semillas</h4>
@@ -317,14 +332,6 @@
                     </div>
                 </article>
 
-            </div>
-
-            <div class="pagination">
-                <a href="#" class="page-link">Anterior</a>
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link">Siguiente</a>
             </div>
         </main>
     </div>

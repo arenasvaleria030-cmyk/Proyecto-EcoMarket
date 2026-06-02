@@ -61,3 +61,25 @@
     border-radius: 6px;
     font-size: 1rem;
 }
+
+/* Contenedor principal de la página de contacto */
+.contact-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta del formulario */
+.contact-form-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.contact-form-section h2 {
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}

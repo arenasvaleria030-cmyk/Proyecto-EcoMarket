@@ -107,8 +107,9 @@
             <div class="footer-section">
                 <h3>Enlaces</h3>
                 <ul>
-                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#modal-newsletter" class="footer-modal-link">Boletín Informativo</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -122,6 +123,20 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+        <div id="modal-newsletter" class="modal-overlay">
+            <article class="modal-content">
+                <a href="#" class="modal-close">&times;</a>
+                
+                <div class="modal-header-icon">📩</div>
+                <h2>¡Únete a nuestra comunidad verde!</h2>
+                <p>Suscríbete al newsletter de EcoMarket y recibe un <strong>10% de descuento</strong> en tu primera compra, además de tips semanales para una vida sostenible.</p>
+                
+                <form class="modal-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required class="modal-input">
+                    <button type="submit" class="btn">Suscribirme</button>
+                </form>
+            </article>
         </div>
     </footer>
 

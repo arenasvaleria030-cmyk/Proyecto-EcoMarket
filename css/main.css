@@ -40,7 +40,7 @@ img {
    2. ESTILOS DE TU INICIO (HOME) & HERO
    ========================================== */
 .hero {
-    background-color: var(--verde-suave); /* Fondo verde clarito */
+    background-color: var(--verde-suave);
     padding: 80px 0;
     text-align: center; 
     display: flex;
@@ -101,9 +101,9 @@ img {
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Separa el logo, el menú y los iconos */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 5%; /* Deja un espacio limpio a los lados */
+    padding: 15px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -116,7 +116,7 @@ img {
 
 .nav-menu {
     display: flex;
-    gap: 20px; /* Separa cada enlace del menú */
+    gap: 20px;
 }
 
 .nav-link {
@@ -126,7 +126,6 @@ img {
     transition: color 0.3s ease;
 }
 
-/* Cambia a color verde cuando pasamos el mouse o está activo */
 .nav-link:hover, .nav-link.active {
     color: var(--verde-principal);
 }
@@ -143,21 +142,19 @@ img {
    ========================================== */
 .product-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en celulares */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 20px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Cambia a 2 columnas en tablets */
 @media (min-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Cambia a 3 columnas en computadores grandes */
 @media (min-width: 1024px) {
     .product-grid, .home-grid {
         grid-template-columns: repeat(3, 1fr) !important;
@@ -187,16 +184,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Recorta la imagen si se sale de la caja */
+    overflow: hidden;
     border-radius: 6px;
     margin-bottom: 15px;
 }
 
-/* Ajuste indispensable para tus nuevas imágenes de productos */
 .img-content {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Centra y adapta la foto sin deformarla */
+    object-fit: cover;
 }
 
 .product-info h4 {
@@ -368,16 +364,19 @@ img {
     color: #a0aec0;
 }
 
+
 /* ==========================================
    8. VISTA ESPECÍFICA: SOBRE NOSOTROS
    ========================================== */
-   .main-content-about {
-    padding: 20px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+.principle-item {
+    background-color: var(--gris-claro);
+    border: 1px solid var(--borde);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Estructura Historia (Flexbox adaptable) */
 .history-section {
     display: flex;
     flex-direction: column;
@@ -406,15 +405,12 @@ img {
     color: #555555;
 }
 
-/* Pilares en cuadrícula */
 .principles-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
     margin-bottom: 60px;
 }
-
-
 
 .principle-item:hover {
     transform: translateY(-5px);
@@ -432,7 +428,6 @@ img {
     color: var(--gris-oscuro);
 }
 
-/* Bloque de Testimonios (Desplazamiento horizontal en móvil) */
 .testimonials-section {
     margin: 60px 0;
 }
@@ -443,11 +438,11 @@ img {
     overflow-x: auto;
     padding: 20px 5px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Oculta barra en Firefox */
+    scrollbar-width: none;
 }
 
 .testimonials-slider::-webkit-scrollbar {
-    display: none; /* Oculta barra en Chrome/Safari */
+    display: none;
 }
 
 .testimonial-card {
@@ -474,11 +469,11 @@ img {
     margin-top: 15px;
 }
 
+
 /* ==========================================
    9. MEDIA QUERIES PARA SOBRE NOSOTROS
    ========================================== */
 @media (min-width: 768px) {
-    /* Historia lado a lado en tablets y PC */
     .history-section {
         flex-direction: row;
     }
@@ -511,4 +506,100 @@ img {
     .slider-hint {
         display: none; 
     }
+}
+
+
+/* ==========================================
+   10. MODAL DE NEWSLETTER (:TARGET HACK)
+   ========================================== */
+div.modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    z-index: 99999 !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+div.modal-overlay .modal-content {
+    background-color: #ffffff !important;
+    padding: 35px 25px !important;
+    border-radius: 12px !important;
+    max-width: 450px !important;
+    width: 90% !important;
+    text-align: center !important;
+    position: relative !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+    
+    transform: scale(0.8);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Disparador dinámico mediante la URL */
+div.modal-overlay:target {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+div.modal-overlay:target .modal-content {
+    transform: scale(1) !important;
+}
+
+.modal-close {
+    position: absolute !important;
+    top: 10px !important;
+    right: 20px !important;
+    font-size: 2rem !important;
+    color: #718096 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.modal-close:hover {
+    color: #e74c3c !important;
+}
+
+.modal-header-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.modal-content h2 {
+    font-size: 1.5rem !important;
+    color: #2c3e50 !important;
+    margin-bottom: 12px !important;
+}
+
+.modal-content p {
+    font-size: 0.95rem !important;
+    color: #555555 !important;
+    margin-bottom: 20px !important;
+}
+
+.modal-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.modal-input {
+    width: 100% !important;
+    padding: 12px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 1rem !important;
+    outline: none !important;
+}
+
+.modal-input:focus {
+    border-color: #2ecc71 !important;
 }
